@@ -2,10 +2,7 @@
   "experimentalServices": {
     "frontend": {
       "routePrefix": "/",
-      "framework": "vite",
-      "rootDirectory": "frontend",
-      "installCommand": "npm install",
-      "buildCommand": "npm run build"
+      "framework": "vite"
     },
     "backend": {
       "entrypoint": "backend/src/server.js",
