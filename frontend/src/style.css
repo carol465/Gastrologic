@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+  /* ajuda-me a manter atrutura do frontend em diversas dimensões de ecras */
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; 
+}
+
+
+@font-face {
+  font-family: 'Magneton';
+  src: url('/fonts/magneton-light.ttf') format('truetype'); 
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/nunito-variable.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/nunito-italic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@theme {
+  /* cores*/
+  --color-sage-green-500: #86b14e;
+  --color-sage-green-600: #6b8e3e;
+  --color-golden-chestnut-500: #d0772f;
+  --color-tan-200: #e1c9b7;
+  --color-tan-300: #d3ae92;
+  --color-berry-500: #aa4b56;
+  --color-berry-600: #8e3e48;
+  --color-shadow-grey-700: #4b4059;
+  --color-shadow-grey-800: #322b3b;
+
+  /*cores brilhantes*/
+  --color-bright-green: #2ecc71;
+  --color-bright-orange: #E67E22;
+  --color-bright-gold: #F1C40F;
+  --color-bright-red: #E74C3C;
+
+  /* tipografia */
+  --font-nunito: "Nunito", sans-serif;
+  --font-magneton: "Magneton", cursive;
+}
+
+/* animações */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 25s linear infinite;
+}
+
+.reverse-spin {
+  animation: spin-slow 25s linear infinite reverse;
+}
+
+
+@layer base {
+  body {
+  
+    @apply font-nunito text-shadow-grey-800 bg-stone-50;
+  }
+  
+  h1, h2, h3 {
+    @apply font-magneton;
+  }
+}
